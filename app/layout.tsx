@@ -7,6 +7,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 import './globals.css'
 import { cn } from '@/lib/utils';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({
             forcedTheme="dark"
             storageKey='livegame-keys'
           >
+            <Toaster theme="light" position="bottom-center" />
         {children}
         </ThemeProvider>
         </body>
