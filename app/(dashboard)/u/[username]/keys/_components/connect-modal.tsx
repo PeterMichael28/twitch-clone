@@ -45,7 +45,7 @@ export const ConnectModal = () => {
           toast.success("Ingress created");
           closeRef?.current?.click();
         })
-        .catch(() => toast.error("Something went wrong"));
+        .catch((e) => toast.error("Something went wrong", Stringify(e)));
     });
   }
 
