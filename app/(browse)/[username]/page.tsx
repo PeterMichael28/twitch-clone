@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getUserByUsername } from "@/lib/user-service";
 import { isFollowingUser } from "@/lib/follow-service";
 import { isBlockedByUser } from "@/lib/block-service";
-// import { StreamPlayer } from "@/components/stream-player";
+import { StreamPlayer } from "@/components/stream-player";
 
 interface UserPageProps {
   params: {
@@ -28,11 +28,11 @@ const UserPage = async ({
   }
 
   return ( 
-    // <StreamPlayer
-    //   user={user}
-    //   stream={user.stream}
-    //   isFollowing={isFollowing}
-    // />
+    <StreamPlayer
+      user={user}
+      stream={user.stream}
+      isFollowing={isFollowing}
+    />
   );
 }
  
